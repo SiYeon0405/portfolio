@@ -412,6 +412,16 @@ html.desktop-window-ready footer{display:none}
 .window-panel::before{background:linear-gradient(180deg,#dbe4ec 0%,transparent 68%),repeating-conic-gradient(#bac9d5 0% 25%,transparent 0% 50%) 0 0/6px 6px;mask-image:linear-gradient(#000,transparent)}
 .window-panel::after{height:clamp(20px,4vw,48px);mask-image:linear-gradient(transparent,#0009)}
 .cover-spark{color:#52697d}
+
+/* Cover typography */
+.window-panel .hero-copy{font-family:system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+.hero-copy .cover-label{width:fit-content;max-width:100%;margin:0 auto 12px;color:#53677a;font-size:clamp(1.25rem,2.8vw,2rem);font-weight:650;letter-spacing:.01em;line-height:1.2}
+.hero .hero-copy h1.cover-name{width:auto;max-width:none;margin:0;color:#192b3e;font-size:clamp(2.15rem,5.8vw,3.5rem);font-weight:800;letter-spacing:-.045em;line-height:1.16;overflow-wrap:anywhere}
+.hero .hero-copy .cover-role{display:block;margin-top:7px;color:#344f67;font-size:clamp(1.25rem,3vw,1.75rem);font-weight:700;letter-spacing:-.035em;line-height:1.3}
+.hero-copy .cover-statement{margin-top:18px;padding:8px 15px;color:#293c50;font-size:clamp(1rem,2.1vw,1.25rem);font-weight:600;line-height:1.55;overflow-wrap:anywhere}
+.hero-copy .hero-tech{gap:6px;margin-top:13px}
+.hero-copy .hero-tech li{background:#edf2f7;border-color:#bdcbd8;color:#2b4257;padding:3px 8px;font:650 clamp(.875rem,1.5vw,1rem)/1.35 system-ui,sans-serif}
+.hero .hero-copy .cta{margin-top:18px;font-size:clamp(1rem,1.8vw,1.125rem);font-weight:750}
 </style>
 </head>
 <body>
@@ -432,9 +442,9 @@ html.desktop-window-ready footer{display:none}
 <a class="tool-tile" href="#awards" aria-label="수상 경력"><span class="pixel-icon book" aria-hidden="true"></span></a>
 </nav>
 <div class="window-panel"><div class="hero-copy">
-<h1 id="intro"><span class="visually-hidden">Portfolio</span><img class="pixel-title" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAAAdCAYAAAB/lJiIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIcSURBVGhD7ZHBbcMwEARdSRpIA+m/MQV+CDCGd3t7pGxAsh7z4cyShvzYtu3xrfz8/m2EzSrO/crNMhx8C/zg7/i4T6r7Kz/LcPAN8GO+48PuVPdXfpbh4Mw4H4cfsupXqd6q/CzDwRnpfJxOewTOe8rNMhycEefjzbRH8On3doaDM9L5eJ32CD793k76MM87P4q7zh1ZH53zLCLbZ/D3VFu2pOorr1q1G+LuBYR9BDdqH52pc5Ldm1H9nghu1L7rsy7itbcGhI92Hj/qDredube74U7d0fVRo9g34ai6mD5q2NHRqy5CbXjnTMuOLR191q16NnS7TwVRDR19p6PPOrWh77ZsVroVT0evuuGQo2zsOlK19FFDOr3TOo3brnjlCNvhgINs6DpStZWP6Gyc1mncdsUrR9gOBxxkQ9eRqq18RGfjtE7jtiteOcJ2OOAgG7qOVG3lIzobp3Uat13xyhG2wwEH2dB1pGorH9HZOK3TuO2KV46wHQ44iEbs6Oizjt5tSGfjtGzcjt5plKejz7rn2XDIMR2929HRZx19BDdqN9uxpaPPulXPhm73oajg4+qRDG6zO+gjuFH7yqtWwW12R9dHjWLftEavwwz2EdyoPX0Gd9m+8oR9BDdq3/VZF/HaD4PsEj6k4LZzT7dX22hf+QhuOvuqr7xq1W6IGdyck/uPvSj3H3tR7j/2otx/7EW5/9iLcv+xF+Ufcsf54kFV3SYAAAAASUVORK5CYII=" alt="" width="118" height="29"><span class="cover-spark" aria-hidden="true">✦</span></h1>
-<p class="cover-name">박시연 · AI 백엔드 개발</p>
-<div class="cover-statement"><span aria-hidden="true">▼</span>인터뷰와 문서에 근거해 답하는 AI 백엔드를 개발합니다.</div>
+<p class="cover-label">Portfolio</p>
+<h1 id="intro" class="cover-name">박시연 <span class="cover-role">AI 백엔드 개발</span></h1>
+<div class="cover-statement">인터뷰와 문서에 근거해 답하는 AI 백엔드를 개발합니다.</div>
 <ul class="hero-tech" aria-label="핵심 기술"><li>Python</li><li>FastAPI</li><li>Django</li><li>RAG</li><li>PostgreSQL</li></ul>
 <a class="cta" href="#work">프로젝트 보기 <span aria-hidden="true">↓</span></a>
 </div></div>
