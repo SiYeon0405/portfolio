@@ -317,7 +317,6 @@ main.shell{width:100%;max-width:none;padding-top:0}
 }
 
 html.desktop-window-ready,html.desktop-window-ready body{overflow:hidden}
-html.desktop-window-ready footer{display:none}
 .desktop-dialog{margin:auto;padding:0;border:1px solid #233954;background:#f8fbff;color:#213047;box-shadow:inset 1px 1px #fff,6px 7px #10203570;width:min(960px,calc(100% - 42px));max-width:none;max-height:84vh;max-height:84svh;overflow:hidden}
 .desktop-dialog::backdrop{background:#10213972}
 .desktop-dialog .page-paper{width:100%;margin:0;padding:0;border:0;background:#f8fbff;box-shadow:none;border-radius:0;max-height:83vh;max-height:83svh;overflow:auto;overscroll-behavior:contain}
@@ -327,8 +326,6 @@ html.desktop-window-ready footer{display:none}
 .desktop-dialog .page-paper>.active-window h2{position:sticky;top:0;z-index:1}
 .desktop-dialog .window-close{position:absolute;top:8px;right:18px;z-index:2;width:24px;height:24px;padding:0;border:1px solid #354253;background:#d4dae2;color:#172737;box-shadow:inset 1px 1px #fff,inset -1px -1px #8493a3;font:700 19px/1 monospace;cursor:pointer}
 .desktop-dialog .window-close:hover{background:#eff3f8}
-.desktop-dialog #about footer{display:block;padding-bottom:0}
-.desktop-dialog #about footer .shell{width:100%}
 @media(max-width:640px){.desktop-dialog{width:calc(100% - 24px);max-height:87svh}.desktop-dialog .page-paper{max-height:86svh}.desktop-dialog .window-close{right:15px}}
 
 /* Motion and reading cues for the retro desktop. */
@@ -438,7 +435,6 @@ html.desktop-window-ready footer{display:none}
 /* Profile identity */
 #about .profile-with-photo .profile-name{margin:0 0 12px;color:#192b3e;font-size:clamp(2rem,4.8vw,2.8rem);font-weight:800;line-height:1.15;letter-spacing:-.045em}
 #about .profile-with-photo .profile-academics{margin:0 0 8px;color:#344f67;font-size:1.05rem;line-height:1.35}
-.foot > a{margin-inline-start:auto}
 </style>
 </head>
 <body>
@@ -561,7 +557,6 @@ html.desktop-window-ready footer{display:none}
 <li id="ai-award"><p class="award-date">2024.12.12</p><div><h3>AI 경진대회 <span>대상</span></h3><p class="award-org">남서울대학교</p><p>Django 문서 관리 서비스에 문서 검색과 답변 출처 표시를 구현했습니다.</p><a href="#new-bees">후속 프로젝트 new_bees →</a></div></li></ul></section>
 </div>
 </main>
-<footer><div class="shell foot"><a href="https://github.com/SiYeon0405">GitHub 프로필 ↗</a></div></footer>
 <script>
 const work = document.getElementById('work');
 const filters = work.querySelector('.filters');
@@ -618,11 +613,9 @@ const dialog = document.getElementById('desktop-dialog');
 if (typeof dialog.showModal === 'function') {
   const paper = document.querySelector('.page-paper');
   const closeButton = dialog.querySelector('.window-close');
-  const footer = document.querySelector('footer');
   let activeWindow = null;
   let returnFocus = null;
   dialog.append(paper);
-  document.getElementById('about').append(footer);
   document.documentElement.classList.add('desktop-window-ready');
 
   function showSection(id, trigger) {
