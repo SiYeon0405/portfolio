@@ -443,8 +443,8 @@ html.desktop-window-ready,html.desktop-window-ready body{overflow:hidden}
 #work .project-highlights dd{margin:0;color:#23384f;font-size:.95rem;line-height:1.55;font-weight:650}
 #work .project-number,#work .content .chart .barrow:last-child b,#work #nuri-ai .permissions tbody td:not(:first-child){color:#922e2a;font-weight:800;font-variant-numeric:tabular-nums}
 #work .project-number{font-size:1.13em}
-#work .project-emphasis{color:#24384d;font-weight:800;padding:0 .13em;background:linear-gradient(transparent 17%,#ffe28b 17% 95%,transparent 95%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
-#work .project-emphasis.project-evidence-number{color:#8b2522;font-variant-numeric:tabular-nums}
+:is(#work,#ai-skills) .project-emphasis{color:#24384d;font-weight:800;padding:0 .13em;background:linear-gradient(transparent 17%,#ffe28b 17% 95%,transparent 95%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+:is(#work,#ai-skills) .project-emphasis.project-evidence-number{color:#8b2522;font-variant-numeric:tabular-nums}
 #work .content :is(p,li):has(.project-emphasis){line-height:1.65}
 @media(max-width:620px){#work .project-highlights{grid-template-columns:1fr;gap:6px}}
 
@@ -586,10 +586,10 @@ body{line-height:1.7;letter-spacing:normal}
 </section>
 
 <section id="ai-skills" class="section" aria-labelledby="ai-skills-title"><div class="section-head"><h2 id="ai-skills-title">AI 활용 역량</h2></div>
-<div class="grid ai-skills"><article class="card"><h3>AI 도구로 개발·실험</h3><p class="ai-tools">ChatGPT · Codex</p><ul><li>실험에서 비교할 조건과 테스트 절차를 정리했습니다.</li><li>누리과정 분류 모델의 교차검증과 별도 테스트 결과를 비교하고, 혼동행렬에서 오분류를 확인했습니다.</li></ul><a href="#nuri-ai">누리과정 실험 보기 →</a></article>
-<article class="card"><h3>AI 기능을 서비스에 연결</h3><p class="ai-tools">생성형 AI API</p><ul><li>ODM에서 책 요약과 독서 모임 모집글 초안을 생성하도록 구현했습니다.</li><li>입력값과 로그인 상태를 확인하고, API 응답에서 화면에 표시할 텍스트를 추출했습니다.</li></ul><a href="#odm">ODM 구현 보기 →</a></article>
-<article class="card"><h3>AI 리포트에 논문 근거 연결</h3><p class="ai-tools">OAP · pgvector · BM25</p><ul><li>인터뷰 내용으로 논문 근거를 검색하고 리포트에 인용을 연결했습니다.</li><li>인용 ID를 검사하고, 답변 15개·모델 호출 5회 조건에서 처리 시간을 41.0초에서 17.2초로 줄였습니다.</li></ul><a href="#oap">OAP 구현 보기 →</a></article>
-<article class="card"><h3>AI 응답의 근거 검증</h3><p class="ai-tools">OpenAI 임베딩 · Qdrant</p><ul><li>new_bees에서 문서를 검색하고 답변에 출처를 붙이는 흐름을 연결했습니다.</li><li>검증 질문 14개 모두 상위 5개 검색 결과에서 정답 근거를 찾았습니다.</li></ul><a href="#new-bees">new_bees 평가 보기 →</a></article></div></section>
+<div class="grid ai-skills"><article class="card"><h3>AI 도구로 개발·실험</h3><p class="ai-tools">ChatGPT · Codex</p><ul><li>실험에서 <strong class="project-emphasis">비교할 조건과 테스트 절차</strong>를 정리했습니다.</li><li>누리과정 분류 모델의 <strong class="project-emphasis">교차검증과 별도 테스트 결과를 비교</strong>하고, 혼동행렬에서 오분류를 확인했습니다.</li></ul><a href="#nuri-ai">누리과정 실험 보기 →</a></article>
+<article class="card"><h3>AI 기능을 서비스에 연결</h3><p class="ai-tools">생성형 AI API</p><ul><li>ODM에서 <strong class="project-emphasis">책 요약과 독서 모임 모집글 초안</strong>을 생성하도록 구현했습니다.</li><li><strong class="project-emphasis">입력값과 로그인 상태를 확인</strong>하고, API 응답에서 화면에 표시할 텍스트를 추출했습니다.</li></ul><a href="#odm">ODM 구현 보기 →</a></article>
+<article class="card"><h3>AI 리포트에 논문 근거 연결</h3><p class="ai-tools">OAP · pgvector · BM25</p><ul><li>인터뷰 내용으로 <strong class="project-emphasis">논문 근거를 검색하고 리포트에 인용을 연결</strong>했습니다.</li><li>인용 ID를 검사하고, 답변 15개·모델 호출 5회 조건에서 처리 시간을 <strong class="project-emphasis project-evidence-number">41.0초에서 17.2초로</strong> 줄였습니다.</li></ul><a href="#oap">OAP 구현 보기 →</a></article>
+<article class="card"><h3>AI 응답의 근거 검증</h3><p class="ai-tools">OpenAI 임베딩 · Qdrant</p><ul><li>new_bees에서 <strong class="project-emphasis">문서를 검색하고 답변에 출처를 붙이는</strong> 흐름을 연결했습니다.</li><li><strong class="project-emphasis project-evidence-number">검증 질문 14개 모두 상위 5개 검색 결과</strong>에서 정답 근거를 찾았습니다.</li></ul><a href="#new-bees">new_bees 평가 보기 →</a></article></div></section>
 <section id="awards" class="section" aria-labelledby="awards-title"><div class="section-head"><h2 id="awards-title">수상 경력</h2></div>
 <ul class="award-list"><li id="oap-award"><p class="award-date">2026.11.06</p><div><h3>한국실천공학교육학회 교육장비 개발 경진대회 <span>동상</span></h3><p class="award-org">한국실천공학교육학회</p><p>창업 아이디어의 시장성을 점검할 수 있도록 사용자 답변에 따른 질문과 분석 리포트 생성 기능을 개발했습니다.</p><a href="#oap">OAP 프로젝트 →</a></div></li>
 <li id="nuri-award"><p class="award-date">2026.07–08 · 7주</p><div><h3>엔비디아 AI 부트캠프 <span>장려상</span></h3><p class="award-org">한컴이노스트림</p><p>AI와 모델 튜닝을 학습하고, 유치원 교사를 위한 누리과정 교육과정 추천 AI를 개발했습니다.</p><a href="#nuri-ai">누리과정 추천 AI →</a></div></li>
