@@ -459,6 +459,11 @@ body{line-height:1.7;letter-spacing:normal}
 .page-paper .content h3{font-size:1.075rem;line-height:1.45}
 .page-paper .content :is(code,kbd,samp){overflow-wrap:anywhere}
 .hero .hero-copy .cover-role img{display:block;width:min(100%,clamp(8.25rem,18vw,11.5rem));height:auto;margin-inline:auto;image-rendering:pixelated}
+
+/* Development awards */
+#awards .award-list li.award-development{padding-inline:12px;background:#e8f0fa;box-shadow:inset 4px 0 #366195}
+#awards .award-list li.award-development h3 span{background:#d6e5fa;border-color:#a5bddb;color:#173a67;font-weight:800}
+#awards .award-list li.award-development:target{outline:2px solid #366195;outline-offset:-2px}
 </style>
 </head>
 <body>
@@ -591,12 +596,12 @@ body{line-height:1.7;letter-spacing:normal}
 <article class="card"><h3>AI 리포트에 논문 근거 연결</h3><p class="ai-tools">OAP · pgvector · BM25</p><ul><li>인터뷰 내용으로 <strong class="project-emphasis">논문 근거를 검색하고 리포트에 인용을 연결</strong>했습니다.</li><li>인용 ID를 검사하고, 답변 15개·모델 호출 5회 조건에서 처리 시간을 <strong class="project-emphasis project-evidence-number">41.0초에서 17.2초로</strong> 줄였습니다.</li></ul><a href="#oap">OAP 구현 보기 →</a></article>
 <article class="card"><h3>AI 응답의 근거 검증</h3><p class="ai-tools">OpenAI 임베딩 · Qdrant</p><ul><li>new_bees에서 <strong class="project-emphasis">문서를 검색하고 답변에 출처를 붙이는</strong> 흐름을 연결했습니다.</li><li><strong class="project-emphasis project-evidence-number">검증 질문 14개 모두 상위 5개 검색 결과</strong>에서 정답 근거를 찾았습니다.</li></ul><a href="#new-bees">new_bees 평가 보기 →</a></article></div></section>
 <section id="awards" class="section" aria-labelledby="awards-title"><div class="section-head"><h2 id="awards-title">수상 경력</h2></div>
-<ul class="award-list"><li id="oap-award"><p class="award-date">2026.11.06</p><div><h3>한국실천공학교육학회 교육장비 개발 경진대회 <span>동상</span></h3><p class="award-org">한국실천공학교육학회</p><p>창업 아이디어의 시장성을 점검할 수 있도록 사용자 답변에 따른 질문과 분석 리포트 생성 기능을 개발했습니다.</p><a href="#oap">OAP 프로젝트 →</a></div></li>
-<li id="nuri-award"><p class="award-date">2026.07–08 · 7주</p><div><h3>엔비디아 AI 부트캠프 <span>장려상</span></h3><p class="award-org">한컴이노스트림</p><p>AI와 모델 튜닝을 학습하고, 유치원 교사를 위한 누리과정 교육과정 추천 AI를 개발했습니다.</p><a href="#nuri-ai">누리과정 추천 AI →</a></div></li>
+<ul class="award-list"><li id="oap-award" class="award-development"><p class="award-date">2026.11.06</p><div><h3>한국실천공학교육학회 교육장비 개발 경진대회 <span>동상</span></h3><p class="award-org">한국실천공학교육학회</p><p>창업 아이디어의 시장성을 점검할 수 있도록 사용자 답변에 따른 질문과 분석 리포트 생성 기능을 개발했습니다.</p><a href="#oap">OAP 프로젝트 →</a></div></li>
+<li id="nuri-award" class="award-development"><p class="award-date">2026.07–08 · 7주</p><div><h3>엔비디아 AI 부트캠프 <span>장려상</span></h3><p class="award-org">한컴이노스트림</p><p>AI와 모델 튜닝을 학습하고, 유치원 교사를 위한 누리과정 교육과정 추천 AI를 개발했습니다.</p><a href="#nuri-ai">누리과정 추천 AI →</a></div></li>
 <li id="idea-award"><p class="award-date">2025.11.28</p><div><h3>idea창업경진대회 <span>대상</span></h3><p class="award-org">마음임베스트먼트</p><p><a href="#marketing-award">창업 마케팅 부트캠프</a>에서 발굴한 아이디어를 보완해 경진대회에 출품했습니다.</p></div></li>
 <li id="presentation-award"><p class="award-date">2025.11.21</p><div><h3>충남권 프레젠테이션 대회 <span>최우수상</span></h3><p class="award-org">충청권역 대학 CTL협의회 주최</p><p>교내 AI 경진대회에서 수상한 문서 관리 프로젝트를 프레젠테이션 사례로 발표했습니다.</p><a href="#new-bees">후속 프로젝트 new_bees →</a></div></li>
 <li id="marketing-award"><p class="award-date">2025.11.16</p><div><h3>창업 마케팅 부트캠프 <span>대상</span></h3><p class="award-org">마음임베스트먼트</p><p>창업 아이디어를 발굴하고 아이템의 마케팅 방식을 정리했습니다.</p></div></li>
-<li id="ai-award"><p class="award-date">2024.12.12</p><div><h3>AI 경진대회 <span>대상</span></h3><p class="award-org">남서울대학교</p><p>Django 문서 관리 서비스에 문서 검색과 답변 출처 표시를 구현했습니다.</p><a href="#new-bees">후속 프로젝트 new_bees →</a></div></li></ul></section>
+<li id="ai-award" class="award-development"><p class="award-date">2024.12.12</p><div><h3>AI 경진대회 <span>대상</span></h3><p class="award-org">남서울대학교</p><p>Django 문서 관리 서비스에 문서 검색과 답변 출처 표시를 구현했습니다.</p><a href="#new-bees">후속 프로젝트 new_bees →</a></div></li></ul></section>
 </div>
 </main>
 <script>
