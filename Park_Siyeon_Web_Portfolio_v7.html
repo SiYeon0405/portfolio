@@ -616,17 +616,26 @@ const compareNames = (first, second) => {
   const a = projectName(first);
   const b = projectName(second);
   const startsInKorean = (name) => /^[ㄱ-ㅎ가-힣]/.test(name);
-  return Number(startsInKorean(b)) - Number(startsInKorean(a)) || a.localeCompare(b, 'ko', { sensitivity: 'base' });
+  return Number(startsInKorean(a)) - Number(startsInKorean(b)) || a.localeCompare(b, 'ko', { sensitivity: 'base' });
 };
-const allCards = [...cards].sort(compareNames);
-const experimentCards = [
-  ...['nuri-ai', 'knn'].map((id) => cards.find((card) => card.id === id)),
-  ...cards.filter((card) => !['nuri-ai', 'knn'].includes(card.id)),
-];
+const tabPriorities = {
+  dev: ['new-bees', 'knn', 'oap', 'odm', 'moonk', 'vesta', 'nuri-ai'],
+  contest: ['moonk', 'vesta', 'nuri-ai'],
+};
+const orderByPriority = (priority) => {
+  const ranks = new Map(priority.map((id, index) => [id, index]));
+  return [...cards].sort((a, b) => (ranks.get(a.id) ?? priority.length) - (ranks.get(b.id) ?? priority.length));
+};
+const cardOrders = {
+  all: [...cards].sort((a, b) => Number(b.id === 'nuri-ai') - Number(a.id === 'nuri-ai') || compareNames(a, b)),
+  dev: orderByPriority(tabPriorities.dev),
+  contest: orderByPriority(tabPriorities.contest),
+};
 const viewNotes = {
   featured: '주요 프로젝트',
-  all: '가나다·ABC 순',
-  dev: '모델 평가·실험부터 보기',
+  all: '누리과정 추천 AI 먼저 · 이후 이름순',
+  dev: '문서 검색과 k-NN 실험부터 보기',
+  contest: 'Flutter·PyQt 화면 구현부터 보기',
 };
 filters.hidden = false;
 function applyFilter(category) {
@@ -635,7 +644,7 @@ function applyFilter(category) {
   for (const button of buttons) {
     button.setAttribute('aria-pressed', String(button === selected));
   }
-  const ordered = category === 'all' ? allCards : category === 'dev' ? experimentCards : cards;
+  const ordered = cardOrders[category] ?? cards;
   let count = 0;
   for (const card of ordered) {
     card.hidden = category !== 'all' && !card.dataset.category.split(' ').includes(category);
